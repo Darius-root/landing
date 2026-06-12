@@ -113,6 +113,8 @@
     gap: 6px !important;
   }
 
+.roadmap-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+
   /* Réduction du padding du container */
   .container {
     padding: 0 16px !important;
@@ -770,6 +772,29 @@
   left: 0;
   right: 0;
 }
+  .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .roadmap-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      border: 1px solid var(--gray-200);
+    }
+    .roadmap-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--violet-bg-light);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--violet);
+      margin-bottom: 20px;
+    }
 
 .dot {
   width: 8px;
@@ -890,6 +915,14 @@
         <p>GPS, Wi-Fi, dashboard temps réel — une approche professionnelle et sans couture.</p>
       </div>
       <div class="features-list">
+         <div class="feature-card">
+          <div class="feature-icon"><i class="ti ti-bell-ringing"></i></div>
+          <div class="feature-body">
+            <h3>Rappel intelligent – plus aucun oubli</h3>
+            <p>Recevez une notification sur votre mobile 5 minutes avant l’heure de pointe, puis une seconde au moment exact. D’un simple tap, vous pointez votre arrivée sans délai.</p>
+            <span class="badge badge-violet">Anti‑retard</span>
+          </div>
+        </div>
         <div class="feature-card"><div class="feature-icon"><i class="ti ti-map-pin"></i></div><div class="feature-body"><h3>Géolocalisation intelligente</h3><p>Pointage autorisé uniquement dans les zones que vous définissez (bureaux, chantiers, magasins). Anti-fraude intégré.</p><span class="badge badge-violet">Sécurité renforcée</span></div></div>
         <div class="feature-card"><div class="feature-icon"><i class="ti ti-wifi"></i></div><div class="feature-body"><h3>Double vérification Wi-Fi</h3><p>Associez le réseau de votre entreprise pour confirmer la présence physique. Une couche de confiance absolue.</p><span class="badge badge-green">Double contrôle</span></div></div>
         <div class="feature-card"><div class="feature-icon"><i class="ti ti-fingerprint"></i></div><div class="feature-body"><h3>Pointage 1 seconde</h3><p>L'application mobile permet aux collaborateurs d'enregistrer arrivée, pause, départ d’un simple tap. Synchronisation instantanée.</p><span class="badge badge-violet">Ultra-rapide</span></div></div>
@@ -948,7 +981,20 @@
       </div>
     </section>
   </div>
-
+  <div class="container">
+    <section id="roadmap">
+      <div class="section-header">
+        <span class="tag">Feuille de route</span>
+        <h2>Fonctionnalités à venir</h2>
+      </div>
+      <div class="roadmap-grid">
+        <div class="roadmap-card"><div class="roadmap-icon"><i class="ti ti-face-id"></i></div><h3>Reconnaissance faciale</h3><p>Vérification biométrique optionnelle</p><span class="badge badge-future"> Bientôt</span></div>
+        <div class="roadmap-card"><div class="roadmap-icon"><i class="ti ti-calendar-stats"></i></div><h3>Planning intégré</h3><p>Comparez présence réelle vs prévisionnelle</p><span class="badge badge-future">septembre 2026</span></div>
+        <div class="roadmap-card"><div class="roadmap-icon"><i class="ti ti-robot"></i></div><h3>Assistant IA</h3><p>Alertes prédictives et recommandations</p><span class="badge badge-future"> En cours</span></div>
+        <div class="roadmap-card"><div class="roadmap-icon"><i class="ti ti-api"></i></div><h3>API ouverte</h3><p>Intégration SIRH, paie, Slack, Teams</p><span class="badge badge-future">Fin année 2026</span></div>
+      </div>
+    </section>
+  </div>
   <!-- CTA violette -->
   <div class="container">
     <div id="contact" class="cta-section">
