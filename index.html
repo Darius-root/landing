@@ -92,20 +92,109 @@
     }
 
     .btn-primary {
-      display: inline-flex;
       align-items: center;
       gap: 10px;
       background: var(--violet);
       color: white;
       font-weight: 600;
       font-size: 0.95rem;
-      padding: 12px 28px;
+      padding: 10px 18px;
       border-radius: var(--radius-sm);
       border: none;
       cursor: pointer;
       transition: all 0.2s ease;
       box-shadow: var(--shadow-sm);
-    }
+    }/* ===== RESPONSIVE MOBILE : corrections débordements ===== */
+@media (max-width: 768px) {
+  /* Boutons plus compacts */
+  .btn-primary, .btn-outline, .btn-white {
+    padding: 8px 18px !important;
+    font-size: 0.85rem !important;
+    gap: 6px !important;
+  }
+
+  /* Réduction du padding du container */
+  .container {
+    padding: 0 16px !important;
+  }
+
+  /* Hero : texte plus petit */
+  .hero h1 {
+    font-size: 2rem !important;
+  }
+  .hero p {
+    font-size: 0.95rem !important;
+  }
+
+  /* Téléphone (carrousel) : largeur réduite */
+  .phone-frame {
+    width: 100% !important;
+    max-width: 260px !important;
+    margin: 0 auto !important;
+  }
+  .carousel-container {
+    min-height: 400px !important;
+  }
+
+  /* Dashboard image : sans marge négative */
+  .dashboard-wrap img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Grilles : passage en 1 colonne si nécessaire */
+  .problem-grid, .kpi-grid, .benefits-grid, .roadmap-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Sections : padding réduit */
+  section {
+    padding: 48px 0 !important;
+  }
+  .section-header h2 {
+    font-size: 1.6rem !important;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 40px 20px !important;
+  }
+  .cta-section h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* Footer : flex vertical */
+  .footer-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .footer-links {
+    justify-content: center !important;
+  }
+}
+
+/* Pour les très petits écrans (moins de 480px) */
+@media (max-width: 480px) {
+  .hero-cta {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .hero-cta .btn-primary,
+  .hero-cta .btn-outline {
+    justify-content: center !important;
+  }
+  .stat-number {
+    font-size: 1.5rem !important;
+  }
+  .phone-frame {
+    max-width: 220px !important;
+  }
+  .badge, .tag {
+    font-size: 0.7rem !important;
+    padding: 3px 10px !important;
+  }
+}
     .btn-primary:hover {
       background: var(--violet-dark);
       transform: translateY(-2px);
@@ -122,7 +211,7 @@
       color: var(--violet);
       font-weight: 600;
       font-size: 0.95rem;
-      padding: 11px 26px;
+      padding: 8px 26px;
       border-radius: var(--radius-sm);
       cursor: pointer;
       transition: all 0.2s ease;
@@ -714,7 +803,6 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="nav-cta">
-        <a class="btn-outline" href="#contact">Espace pro</a>
         <a class="btn-primary" href="#contact">Démo gratuite <i class="ti ti-arrow-right"></i></a>
       </div>
     </div>
@@ -872,7 +960,8 @@
       </div>
       <div class="cta-email">📧whatsapp: (+229) 01 51 93 01 86</div>
     </div>
-  </div>
+  </div>Écrire à EZ · Chemise + pantalon
+
 </main>
 
 <footer>
